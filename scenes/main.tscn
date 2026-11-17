@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://kgd7bcubn7b8"]
+
+[ext_resource type="PackedScene" uid="uid://d2378nk2l3e12" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://c2yw81ql05qdj" path="res://scenes/campus_map.tscn" id="2_campus"]
+[ext_resource type="Script" uid="uid://cgte1j6itvgxh" path="res://scripts/main.gd" id="3_main"]
+[ext_resource type="PackedScene" uid="uid://cdb43tsy0tpfq" path="res://scenes/npc.tscn" id="4_npc"]
+
+[node name="main" type="Node2D" unique_id=1542898956]
+script = ExtResource("3_main")
+
+[node name="CampusMap" parent="." unique_id=1542898957 instance=ExtResource("2_campus")]
+scale = Vector2(3, 3)
+
+[node name="player" parent="." unique_id=1493934410 instance=ExtResource("1_o5qli")]
+position = Vector2(2136, 1400)
+
+[node name="npc1" parent="." unique_id=303956555 instance=ExtResource("4_npc")]
+position = Vector2(1992, 1176)
+
+[node name="npc2" parent="." unique_id=406831265 instance=ExtResource("4_npc")]
+position = Vector2(3672, 1032)
