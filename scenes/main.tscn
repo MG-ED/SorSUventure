@@ -15,7 +15,14 @@ scale = Vector2(3, 3)
 position = Vector2(2136, 1400)
 
 [node name="npc1" parent="." unique_id=303956555 instance=ExtResource("4_npc")]
-position = Vector2(1992, 1176)
+position = Vector2(1752, 1176)
+dialogue = "Welcome to SORSU!
+Enjoy exploring the campus."
+patrol_points = PackedVector2Array(1752, 1176, 2424, 1176)
 
 [node name="npc2" parent="." unique_id=406831265 instance=ExtResource("4_npc")]
-position = Vector2(3672, 1032)
+position = Vector2(1464, 1944)
+tint = Color(0.7, 0.85, 1, 1)
+dialogue = "Hey! Are you lost?
+The campus is big, take your time."
+patrol_points = PackedVector2Array(1464, 1944, 2136, 1944)

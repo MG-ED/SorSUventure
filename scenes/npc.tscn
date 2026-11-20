@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cdb43tsy0tpfq"]
 
+[ext_resource type="Script" uid="uid://1hs4icxtnytl" path="res://scripts/npc.gd" id="1_npcgd"]
 [ext_resource type="Texture2D" uid="uid://diov1jn11xkev" path="res://art/Character/student boy/walking-removebg-preview.png" id="1_nh2m4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xxcha"]
@@ -116,9 +117,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feet"]
+size = Vector2(26, 17)
+
 [node name="npc" type="CharacterBody2D" unique_id=1714783160]
+script = ExtResource("1_npcgd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1205237158]
+position = Vector2(-2.4, -46)
+scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_wvhbo")
-animation = &"idle_left"
-frame_progress = 0.30663928
+animation = &"idle_right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -8)
+shape = SubResource("RectangleShape2D_feet")
